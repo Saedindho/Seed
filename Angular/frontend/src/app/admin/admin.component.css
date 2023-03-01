@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(208, 216, 224);
+}
+
+.myform{
+    text-align: center;
+    margin-top: 6%;
+}
+.form{
+    margin-top: 2%;
+    position: absolute;
+    margin-left: -8%;
+}
+.select{
+    margin-top: 10%;
+}
+.button{
+ width: 10%;
+ height: 5%;
+ margin-left: 30%;
+ margin-top: 5%;
+ position: absolute;
+}
+
+.upload{
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    margin-top: 2%;
+   margin-left: 80%;
+}
+
+/* About us css */
+.about{
+    margin-left: 20%;
+    row-gap: 5%;
+}
+.AB{
+    margin-left: 30%;
+}

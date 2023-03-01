@@ -1,0 +1,15 @@
+body,html{
+    background-color: rgb(185, 207, 226);
+    text-align: center;
+    
+}
+.mat1{
+    margin-top: 10%;
+    margin-right:6%;
+}
+.mat2{
+    margin-top: 10%;
+}
+.mybutton{
+    margin-left: 75%;
+}

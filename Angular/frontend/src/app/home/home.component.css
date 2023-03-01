@@ -1,0 +1,95 @@
+body{
+  
+   width: 85%;
+   height: 100%;
+   position: absolute;
+}
+
+.container{
+   margin-top: 2%;
+}
+.img{
+   width: 30%;
+   height: 40%;
+}
+.myimages{
+   padding: 1rem 1rem 1rem;
+   text-align: center;
+   float: left;
+   width: 30%;
+  
+  left: 8%;
+  transition: 0.5s ease-in-out;
+  
+}
+.myimages:hover{
+   transform: translateY(20px);
+   cursor: pointer;
+}
+.myimages::before{
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: block;
+   width: 100%;
+   height:100%;
+   background:linear-gradient(to bottom,rgba(0,176,155,0.5),rgba(150,201,61,1));
+   z-index: 2;
+   transition: 0.5s all;
+   opacity: 0;
+}
+.myimages:hover::before{
+   opacity: 1;
+}
+.mytot{
+   padding: 2rem 1rem;
+   text-align: center;
+   margin-left: 25%;
+}
+
+/* cover page css*/
+.slide-frame{
+   overflow: hidden;
+   height: 90%;
+   width: 120%;
+   margin-left: -2%;
+   
+}
+
+@keyframes slide_animation{
+   0% {left:0px;}
+   10% {left: 0px;}
+   20% {left: 1200px;}
+   30% {left: 1200px;}
+   40% {left: 2400px;}
+   50% {left: 2400px;}
+   60% {left: 120px;}
+   70% {left: 1200px;}
+   80% {left: 0px;}
+   90% {left: 0px;}
+   100% {left: 0px;}
+}
+.slide-image{
+   width: 3600px;
+   height: 500px;
+   margin-top: -2%;
+   margin: 0 0 0 -2400px;
+   position: relative;
+   animation-name: slide_animation ;
+   animation-duration: 33s;
+   animation-iteration-count: infinite;
+   animation-direction:alternate ;
+   animation-play-state: running;
+}
+
+.img-container{
+   height: 670px;
+   width: 1200px;
+   position: relative;
+   float: left;
+}
+img{
+   width: 120%;
+   height: 100%;
+}

@@ -1,0 +1,41 @@
+<html lang="en">
+    <mat-toolbar class="tool" color="primary">
+        <a mat-button [routerLink]="'/home'">Home</a>
+        <a mat-button [routerLink]="'/content'">Services</a>
+        <a mat-button [routerLink]="'/about'">About Us</a>
+        <a *ngIf="visible" mat-button [routerLink]="'/admin'">Admin</a>
+       
+    </mat-toolbar>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="image-slide">
+    <img src="../../assets/mid3.webp">
+</div>
+
+            <div class="content">
+                
+                <mat-card class="card" *ngFor="let cont of check">
+                    <mat-card-header>
+                       <mat-card-title>
+                           <h2 class="title">{{cont.title}}</h2>
+                       </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                       <p class="description">{{cont.description}}</p>
+                    </mat-card-content>
+                   </mat-card> 
+                   
+                
+            </div>
+
+           
+       
+</body>
+</html>

@@ -1,0 +1,25 @@
+body,html{
+    background-color: rgb(185, 207, 226);
+    text-align: center;
+    
+}
+.container{
+    position: absolute;
+    background-color: rgb(203, 200, 206);
+    box-shadow: 3% solid 4%;
+    width: 30%;
+    height: 80%;
+    margin-left: 28%;
+ margin-top:5%;
+}
+.mat{
+    margin-top: 5%;
+}
+.butt{
+    margin-right: 5%;
+    margin-top: 2%;
+    background-color: rgb(126, 85, 85);
+}
+.mybutton{
+    margin-left: 75%;
+}

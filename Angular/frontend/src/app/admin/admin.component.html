@@ -1,0 +1,90 @@
+<html lang="en">
+    <mat-toolbar class="tool" color="primary">
+        <a mat-button class="myhome" [routerLink]="'/home'">Home</a>
+        <a mat-button class="mycontent" [routerLink]="'/content'">Services</a>
+        <a mat-button class="myabout" [routerLink]="'/about'">About Us</a>
+        <a mat-button class="myadmin" [routerLink]="'/admin'">Admin</a>
+        <!-- 
+ <a mat-button class="table" [routerLink]="'/table'">content delete</a>
+        -->
+       
+        <a class="logout" mat-button (click)="logout()">Logout</a>
+        
+    </mat-toolbar>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form [formGroup]="postt" class="myform">
+    <div class="form-group">
+        <mat-form-field class="title"  appearance="outline">
+        <input  matInput type="text" formControlName="title" placeholder="File title" required >
+    </mat-form-field  >
+    </div>
+    <div class="form-group">
+        <mat-form-field  class="form" appearance="outline">
+        <textarea matInput type="text" formControlName="description"  placeholder="File description" required ></textarea>
+    </mat-form-field>
+    </div>
+   
+    <div class="upload">
+        <input  type="file" name="file" (change)="Kidupload($event)" >
+    </div>
+    <button class="button" type="button" (click)="Submit()">Upload</button>
+
+
+<div class="container mt-5">
+    <mat-form-field class="select" appearance="outline">
+    <mat-select  (change)="Kidupload($event)" formControlName="pag">
+    <mat-option *ngFor="let pag of pages" value="{{pag}}">
+        {{ pag }}
+        
+    </mat-option>
+</mat-select>
+
+</mat-form-field>
+</div>
+
+<div >
+    
+</div>
+<p id="demo"></p>
+
+</form>
+
+<form [formGroup]="About">
+
+    <div class="about">
+        <div class="AB">
+            <h1>About us</h1>
+        </div>
+        <mat-form-field class="title"  appearance="outline">
+            <input  matInput type="text" formControlName="title" placeholder="title" required >
+        </mat-form-field  >
+        <mat-form-field  class="formm" appearance="outline">
+            <textarea matInput type="text" formControlName="aboutme"  placeholder="About Us" required ></textarea>
+        </mat-form-field>
+        <mat-form-field class="title"  appearance="outline">
+            <input  matInput type="email" formControlName="email" placeholder="email" required >
+        </mat-form-field  >
+        
+        <mat-form-field class="title"  appearance="outline">
+            <input  matInput type="number" formControlName="phone" placeholder="phone number" required >
+        </mat-form-field  >
+
+        <mat-form-field class="title"  appearance="outline">
+            <input  matInput type="text" formControlName="facebook" placeholder="facebook" required >
+        </mat-form-field  >
+        <mat-form-field class="title"  appearance="outline">
+            <input  matInput type="text" formControlName="twitter" placeholder="twitter" required >
+        </mat-form-field  >
+        <button type="button" class="batam" (click)="aboutfun()">AboutSave</button>
+    </div>
+
+</form>
+</body>
+</html>

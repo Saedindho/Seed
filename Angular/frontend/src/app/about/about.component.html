@@ -1,0 +1,58 @@
+<html lang="en">
+  <mat-toolbar class="tool" color="primary">
+    <a mat-button [routerLink]="'/home'">Home</a>
+    <a mat-button [routerLink]="'/content'">Services</a>
+    <a *ngIf="visible" mat-button [routerLink]="'/admin'">Admin</a>
+    <a mat-button [routerLink]="'/about'">About Us</a>
+  
+   
+</mat-toolbar>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="slide-show">
+    <div class="image-slide">
+      <img src="../../assets/mid3.webp">
+    </div>
+  </div>
+  <div class="imges">
+    
+  </div>
+  <div  *ngFor="let bout of varabout1">
+    <div  >
+      <mat-card-title class="mytitle" >{{bout.title}}</mat-card-title>
+      <mat-card-content class="aboutcontent">
+        {{bout.aboutme}}
+        </mat-card-content>
+    </div>
+    
+  
+  
+  
+    <mat-card class="aboutus">
+      <mat-card-header class="abt">
+      <mat-card-title > 
+      <h2 >Contact Us</h2>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+  <mat-list>
+    <mat-list-item><mat-icon class="email">email</mat-icon>{{bout.email}}</mat-list-item>
+    <mat-list-item><mat-icon class="phone">phone</mat-icon>{{bout.phone}}</mat-list-item>
+   </mat-list>
+   <mat-list class="both">
+    <mat-list-item><mat-icon class="facebook">facebook</mat-icon>{{bout.facebook}}</mat-list-item>
+    
+
+    <mat-list-item><mat-icon class="twitter">twitter</mat-icon>{{bout.twitter}}</mat-list-item>
+  </mat-list>
+    </mat-card-content>
+    </mat-card>
+  </div>
+</body>
+</html>
+
